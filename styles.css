@@ -1,0 +1,787 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-container{
+    max-width: 1519px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+header{
+    background-color: black;
+    position: sticky;
+    z-index: 1000;
+    top: -270px;
+}
+
+img:hover, .headLines h1:hover {
+    opacity: 0.7;
+}
+
+object{
+    width: 100%;
+    height: fit-content;
+}
+
+iframe{
+    width: 100%;
+    height: fit-content;
+}
+
+.adContainer img:hover, .CNN_Ads img:hover {
+    opacity: 1;
+}
+.newsHighlishts, .adDisplay{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.adContainer{
+    width: 90%;
+    max-width: 1000px;
+    height: 270px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.adContainer img{
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    -webkit-text-fill-color: white;
+}
+
+.navBar, .newsList {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.navBar {
+    top: 0px;
+    background-color: black;
+}
+
+.navLeft{
+    overflow-x: auto;
+    max-width: 900px;
+}
+
+.navLeft, .newsLinks{
+    width: 100%;
+    margin-left: 75px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navBar .navLeft a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navBar .navLeft a:last-child{
+    margin-right: 0px;
+}
+
+.navBar .navLeft img{
+    margin-right: 20px;
+}
+
+.more {
+    display: none;
+}
+
+.navRight{
+    margin-left: auto;
+    margin-right: 80px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navBar .navRight a, .newsLinks a{
+    font-family: calibri;
+    white-space: nowrap;
+}
+
+.navBar li a{
+    margin-right: 20px;
+    -webkit-text-fill-color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+.navBar li a:hover{
+    -webkit-text-fill-color: whitesmoke;
+}
+
+.loginBtn{
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-radius: 7px;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.loginBtn:hover{
+    background-color: rgb(75, 75, 75);
+}
+
+/* newsHighlishts div below nav bar and its content*/
+
+.newsList {
+    margin-top: 10px;
+}
+
+.newsHighlishts{
+    background-color: white;
+}
+
+.newsLinks{
+    margin-top: 20px;
+    margin-right: 75px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.newsLinks a{
+    text-decoration: none;
+    -webkit-text-fill-color: black;
+    font-size: large;
+    position: relative;
+    margin-right: 40px;
+}
+
+.newsLinks a:last-child{
+    margin-right: 0px;
+}
+
+.newsLinks a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    width: 2px;
+    height: 80%;
+    background-color: gray;
+}
+
+.newsLinks a:hover{
+    text-decoration: underline;
+}
+
+.newsLinks a:last-child::before {
+    display: none;
+}
+
+/* NewsBar div and its content*/
+/* Original content of news starts here*/
+
+.newsContainer{
+    display: flex;
+    padding: 30px 60px;
+    width: 100%;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.headLines {
+    padding-right: 30px;
+    box-sizing: border-box;
+    width: 47%;
+    float: left;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.headLines h1{
+    font-size: 60px;
+    font-family: calibri;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 55px;
+}
+
+.newsContainer h3{
+    font-family: calibri;
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+
+.newsContainer a{
+    -webkit-text-fill-color: black;
+    text-decoration: none;
+}
+
+.newsContainer li a, .videoLinks li a{
+    font-size: large;
+    font-family: calibri;
+}
+
+.newsContainer li {
+    margin-bottom: 10px;
+}
+
+.stories li{
+    list-style: none;
+}
+
+.stories:first-child{
+    padding-left: 0px;
+}
+
+.stories h3, .stories li{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.stories li:last-child{
+    border-bottom: none;
+}
+
+.headLines img{
+    margin: 20px 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+}
+
+.world_issues,
+.stories {
+    box-sizing: border-box;
+    width: 26.5%;
+    float: left;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.world_issues{
+    padding-right: 30px;
+}
+
+.stories{
+    padding-left: 20px;
+}
+
+.newsContainer .hit-story img{
+    width: 100%;
+    height: 100%;
+}
+
+.world_issues img, .stories img{
+    max-height: 200px;
+}
+
+.newsContainer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.newsContainer a:hover {
+    text-decoration: underline;
+}
+
+span{
+    font-family: calibri;
+    font-weight: bold;
+}
+
+/* div below newsBar that manages top stories */
+/* div that contains Featured as well */
+
+.topStory, .adsAndLinks, .MoreStories{
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    padding-right: 20px;
+}
+
+.adsAndLinks {
+    padding-left: 20px;
+}
+
+.topStory, .featured{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+:is(.featured, .topStory) > h4::after {
+    content: "";
+    width: 20px;
+    height: 5px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in;
+}
+
+:is(.featured, .topStory) > h4:hover:after {
+    width: 100%;
+}
+
+.featured{
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.newsContainer h4{
+    font-family: 'Times New Roman';
+    margin-bottom: 15px;
+}
+
+.featured h3{
+    margin-top: 10px;
+}
+
+.videoLinks {
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+}
+
+.videoLinks img {
+    float: left;
+}
+
+.newsContainer img{
+    width: 100%;
+}
+
+.newsContainer{
+    gap: 10px;
+}
+
+.featured .videoLinks img {
+    max-height: 70px;
+    width: 20%;
+}
+
+.adsAndLinks .videoLinks img {
+    max-height: 50px;
+    width: 30%;
+}
+
+.videoLinks li{
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.featured .videoLinks li{
+    width: 80%;
+}
+
+.adsAndLinks .videoLinks li{
+    width: 70%;
+}
+
+.moreAdsContainer img{
+    max-height: 200px;
+}
+.moreAdsContainer{
+    max-width: 90%;
+}
+
+/* 3rd Section of web-page */
+
+.business{
+    border-top: none;
+    padding-top: 0px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.MoreStories h3{
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+.MoreStories .videoLinks img {
+    max-height: 70px;
+    width: 30%;
+}
+
+.Opinions{
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.Opinions:first-child{
+    padding-left: 0px;
+}
+
+.Opinions img{
+    max-height: 200px;
+}
+
+h1{
+    margin-left: 75px;
+    font-family: calibri;
+}
+
+/* Featured Section of page */
+
+.CNN_Tops{
+    float: left;
+    width: 33.33%;
+    overflow: hidden;
+}
+
+.CNN_Tops img{
+    max-height: 100%;
+    width: 100%;
+}
+
+.CNN_Ads img{
+    max-height: 600px;
+    height: auto;
+}
+
+.CNN_Ads{
+    padding: 40px;
+}
+
+footer{
+    background-color: black;
+}
+
+.essentials h2{
+    font-size: xx-large;
+}
+
+footer h2, h3{
+    padding-bottom: 20px;
+    color: white;
+    font-family: calibri;
+}
+
+footer h3{
+    padding-top: 20px;
+}
+
+.essentials{
+    float: left;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.essentials img{
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+}
+
+.notToMiss a{
+    -webkit-text-fill-color: white;
+}
+
+.essentialsLinks{
+    width: 40%;
+    padding-top: 60px;
+}
+
+.lineBreak{
+    height: 1px;
+    border:  none;
+    background-color: #ccc;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.searchInput{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+}
+
+.footerLinks{
+    float: left;
+    width: 14.28%;
+}
+
+.mobileFooter {
+    display: none;
+}
+
+
+@media (max-width: 1250px) {
+    .navLeft{
+        overflow-x: hidden;
+    }
+
+    .navLeft a:nth-child(n+10) {
+        display: none;
+    }
+
+    .more {
+        display: block;
+    }
+
+    .newsLinks a::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .navLeft{
+        overflow-x: hidden;
+    }
+
+    .navLeft a:nth-child(n+7) {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .adContainer{
+        height: 100px;
+        padding: 0px;
+    }
+
+    .navLeft{
+        margin-left: 10px;
+    }
+
+    .navRight{
+        margin-right: 0px;
+    }
+
+    .navBar .navRight svg, .loginBtn, a:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    header{
+        top: -100px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navLeft{
+        overflow-x: hidden;
+    }
+
+    .navLeft a:nth-child(n+3) {
+        display: none;
+    }
+
+    .more {
+        display: none;
+    } 
+
+    .newsHighlishts{
+        display: none;
+    }
+
+    .newsContainer a{
+        display: contents;
+    }
+
+    .essentialsLinks{
+        display: none;
+    }
+
+    .footerLinks{
+        display: none;
+    }
+
+    .mobileFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .mobileFooter img{
+        max-width: 25px;
+    }
+    
+    .mobileFooter a{
+        margin-top: 10px;
+        -webkit-text-fill-color: white;
+        text-decoration: none;
+    }
+    
+    .lineBreak {
+        border-top: 1px solid white;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .newsContainer{
+        padding: 5px 5px;
+        width: 100%;
+        overflow: hidden;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headLines {
+        margin-top: 20px;
+        padding-right: 0px;
+        width: 100%;
+        float: left;
+        overflow: hidden;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .newsContainer img{
+        max-height: 400px;
+        width: 100%;
+    }
+
+    .headLines h1{
+        margin-left: 0px;
+        height: fit-content;
+        font-size: 25px;
+        font-family: calibri;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: normal;
+    }
+
+    .world_issues,
+    .stories {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+        height: fit-content;
+    }
+
+    .newsContainer h3{
+        margin-bottom: 0px;
+        font-family: calibri;
+        font-size: 16px;
+    }
+    
+    .newsContainer li a, .videoLinks li a{
+        font-size: 14px;
+        font-family: calibri;
+    }
+    
+    .newsContainer li {
+        height: fit-content;
+        list-style: none;
+    }
+
+    .stories h3, .stories li{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .stories li:last-child{
+        border-bottom: none;
+    }
+
+    .stories,
+    .world_issues{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .newsContainer .hit-story img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .world_issues img, .stories img{
+        max-height: 400px;
+    }
+
+    span{
+        font-weight: lighter;
+    }
+
+    .featured{
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .topStory, .adsAndLinks, .MoreStories{
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        padding: 10px 0px;
+    }
+
+    .adsAndLinks .adContainer {
+        width: 100%;
+    }
+
+    h1{
+        margin: 0px 0px;
+    }
+
+    .CNN_Tops{
+        width: 100%;
+    }
+
+    .CNN_Ads img{
+        width: 100%;
+        max-height: 400px;
+        height: auto;
+    }
+    
+    .CNN_Ads{
+        padding: 40px;
+    }
+
+    .MoreStories .videoLinks img,
+    .featured .videoLinks img,
+    .adsAndLinks .videoLinks img {
+        max-height: 100px;
+        width: 30%;
+    }
+}
